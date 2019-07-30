@@ -1,0 +1,12 @@
+{% extends 'aquainfo/base_list.html' %}
+
+
+
+{% block head_subtitle %}List of Type{% endblock %}
+{% block title %}List of Type{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="types" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

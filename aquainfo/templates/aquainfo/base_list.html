@@ -1,0 +1,30 @@
+{% extends 'aquainfo/base.html' %}
+
+
+
+{% block head_subtitle %}Aquarium Info Model List{% endblock %}
+{% block title %}Aquarium Info Model List{% endblock %}
+
+{% block aquainfo_content_main %}{# main content body #}
+
+    {% include 'aquainfo/includes/pagination.html' %}
+    <ul>
+        {% for object in object_list %}
+            <li>
+                <a href="{{ object.get_absolute_url }}">
+                    {{ object }}
+                </a>
+            </li>
+        {% empty %}
+            <li>
+                {% block aquainfo_model_list_empty %}There are none, right now.{% endblock %}
+            </li>
+        {% endfor %}
+    </ul>
+    {% include 'aquainfo/includes/pagination.html' %}
+
+{% endblock %} 
+
+{% block aquainfo_content_extra %}{% endblock %}{# if required #}
+
+

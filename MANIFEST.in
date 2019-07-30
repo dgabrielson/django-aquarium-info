@@ -1,0 +1,15 @@
+include requirements.txt
+include README.rst
+#recursive-include aquainfo/static *
+recursive-include aquainfo/templates *
+
+# added by check_manifest.py
+include *.py
+recursive-include aquainfo *.html
+recursive-include aquainfo *.py
+recursive-include source_data *.html
+recursive-include source_data *.json
+recursive-include source_data *.pickle
+recursive-include source_data *.py
+recursive-include source_data *.txt
+recursive-include source_data *.values

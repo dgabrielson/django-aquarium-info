@@ -1,0 +1,20 @@
+{% extends 'site_base.html' %}
+
+
+{% block head_title %}{{ block.super }} - {% block head_subtitle %}Aquarium Fish &amp; Plants{% endblock %}{% endblock %}
+
+{% block content %}{% block aquainfo_content %}
+    <section>
+        <h1>{% block title %}Aquarium Fish &amp; Plants{% endblock %}</h1>
+  
+        {% block aquainfo_content_main %}{% endblock %}      
+              
+    </section>
+    {% block aquainfo_content_extra %}{% endblock %}  
+{% endblock %}{% endblock %}       
+
+
+{% block navigation_items %}
+    {{ block.super }}
+    {% block aquainfo_navigation %}{% endblock %}
+{% endblock %}

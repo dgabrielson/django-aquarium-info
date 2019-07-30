@@ -1,0 +1,12 @@
+{% extends 'aquainfo/base_list.html' %}
+
+
+
+{% block head_subtitle %}Freshwater Plants{% endblock %}
+{% block title %}Freshwater Plants{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="plants" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

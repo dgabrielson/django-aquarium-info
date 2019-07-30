@@ -1,0 +1,1 @@
+{% extends 'search/indexes/aquainfo/type_text.txt' %}

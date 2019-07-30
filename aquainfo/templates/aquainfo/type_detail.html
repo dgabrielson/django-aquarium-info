@@ -1,0 +1,67 @@
+{% extends 'aquainfo/base_detail.html' %}
+
+{% load markup %}
+
+
+{% block aquainfo_content_main %}{# main content body #}
+
+    {% if object.description %}
+        <small>
+            (description)
+        </small>
+        {{ object.description|restructuredtext }}
+    {% endif %}
+
+{% endblock %} 
+
+
+{% block aquainfo_navigation %}
+    <li>
+        <a href="{{ object.get_list_url }}">
+            type object list
+        </a>
+    </li>
+{% endblock %}
+
+
+{% block aquainfo_content_extra %}
+
+    {% if object.freshwaterfish_set.active %}
+        <section>
+            <h2>{% block aquainfo_freshwaterfish_set_title %}
+                Freshwater fish 
+                ({{ object.freshwaterfish_set.active|length }})
+            {% endblock %}</h2>
+            
+            <ul>
+                {% for item in object.freshwaterfish_set.active %}
+                    <li>
+                        <a href="{{ item.get_absolute_url }}">
+                            {{ item }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
+    {% if object.freshwaterplant_set.active %}
+        <section>
+            <h2>{% block aquainfo_freshwaterplant_set_title %}
+                Freshwater plants 
+                ({{ object.freshwaterplant_set.active|length }})
+            {% endblock %}</h2>
+            
+            <ul>
+                {% for item in object.freshwaterplant_set.active %}
+                    <li>
+                        <a href="{{ item.get_absolute_url }}">
+                            {{ item }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
+{% endblock %}

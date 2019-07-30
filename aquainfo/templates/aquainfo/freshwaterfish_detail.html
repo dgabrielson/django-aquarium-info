@@ -1,0 +1,157 @@
+{% extends 'aquainfo/base_detail.html' %}
+
+
+
+
+{% block aquainfo_content_main %}{# main content body #}
+
+    <table>
+        {% if object.scientific_name %}
+            <tr>
+                <th>
+                    Scientific name
+                </th>
+                <td>
+                    {{ object.scientific_name }}
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.origin %}
+            <tr>
+                <th>
+                    Origin
+                </th>
+                <td>
+                    {{ object.origin }} 
+                </td>
+                <td>
+                    <a href="{{ object.origin.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.size_display %}
+            <tr>
+                <th>
+                    Size
+                </th>
+                <td>
+                    {{ object.size_display }} cm
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.ph_display %}
+            <tr>
+                <th>
+                    pH
+                </th>
+                <td>
+                    {{ object.ph_display }}
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.temperature_display %}
+            <tr>
+                <th>
+                    Temperature
+                </th>
+                <td>
+                    {{ object.temperature_display }} &deg;C
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.hardness_display %}
+            <tr>
+                <th>
+                     Total hardness
+                </th>
+                <td>
+                    {{ object.hardness_display }} ppm
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.breeding_type %}
+            <tr>
+                <th>
+                    Breeding Type
+                </th>
+                <td>
+                    {{ object.breeding_type }} 
+                </td>
+                <td>
+                    <a href="{{ object.breeding_type.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.preferred_area %}
+            <tr>
+                <th>
+                    Preferred Tank Region
+                </th>
+                <td>
+                    {{ object.preferred_area }} 
+                </td>
+                <td>
+                    <a href="{{ object.preferred_area.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.temperament_family %}
+            <tr>
+                <th>
+                    Temperament (family)
+                </th>
+                <td>
+                    {{ object.temperament_family }} 
+                </td>
+                <td>
+                    <a href="{{ object.temperament_family.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.temperament_others %}
+            <tr>
+                <th>
+                    Temperament (other species)
+                </th>
+                <td>
+                    {{ object.temperament_others }} 
+                </td>
+                <td>
+                    <a href="{{ object.temperament_others.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+    </table>
+
+{% endblock %} 
+
+
+{% block aquainfo_navigation %}
+    <li>
+        <a href="{{ object.get_list_url }}">
+            freshwater fish
+        </a>
+    </li>
+{% endblock %}
+
+

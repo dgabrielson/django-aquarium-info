@@ -1,0 +1,12 @@
+{% extends 'aquainfo/type_list.html' %}
+
+
+
+{% block head_subtitle %}Fish Temperaments{% endblock %}
+{% block title %}Fish Temperaments{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="temperaments" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

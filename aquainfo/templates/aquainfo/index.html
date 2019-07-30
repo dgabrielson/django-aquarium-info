@@ -1,0 +1,84 @@
+{% extends 'aquainfo/base.html' %}
+
+
+
+{% block aquainfo_content_main %}
+    <small>
+        Freshwater only, right now.
+    </small>
+
+    <ul>
+        <li>
+            <a href="{% url 'aquainfo-freshwaterfish-list' %}">
+                Freshwater Fish
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'aquainfo-freshwaterplant-list' %}">
+                Freshwater Plants
+            </a>
+        </li>
+    </ul>
+    
+    <small>
+        Explore some of the other details:
+    </small>
+    
+    <ul>
+        <li>
+            <a href="{% url 'aquainfo-origin-list' %}">
+                Places of origin
+            </a>
+        </li>
+        <li>
+            Fish related:
+            <ul>
+                <li>
+                    <a href="{% url 'aquainfo-fishbreedingtype-list' %}">
+                        Ways that fish breed
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'aquainfo-fishtankregion-list' %}">
+                        Where fish like to be in a tank
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'aquainfo-fishtemperament-list' %}">
+                        Fish temperament
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            Plant related:
+            <ul>
+                <li>
+                    <a href="{% url 'aquainfo-plantgrowthspeed-list' %}">
+                        Plant growth speed
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'aquainfo-plantlighting-list' %}">
+                        Lighting
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'aquainfo-plantpropagationtype-list' %}">
+                        Plant propagation
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'aquainfo-plantsubstrate-list' %}">
+                        Substrate
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'aquainfo-planttankregion-list' %}">
+                        Tank placement
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}            

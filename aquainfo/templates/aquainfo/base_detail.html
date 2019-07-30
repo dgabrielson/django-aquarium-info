@@ -1,0 +1,19 @@
+{% extends 'aquainfo/base.html' %}
+
+
+
+{% block head_subtitle %}{{ object }}{% endblock %}
+{% block title %}{{ object }}{% endblock %}
+
+{% block aquainfo_content_main %}{# main content body #}
+{% endblock %} 
+
+{% block aquainfo_content_extra %}{% endblock %}
+
+{% block aquainfo_navigation %}
+    <li>
+        <a href="{{ object.get_list_url }}">
+            object list
+        </a>
+    </li>
+{% endblock %}

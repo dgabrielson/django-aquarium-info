@@ -1,0 +1,16 @@
+venv/
+build/
+dist/
+test/
+.DS_Store
+
+aquainfo/demo_site/demo_site.db
+aquainfo/demo_site/__media
+aquainfo/__static
+
+
+
+*.pyc
+*~
+*.kate-swp
+*.egg-info

@@ -1,0 +1,4 @@
+docutils
+
+# development req only:
+#-e hg+ssh://dave@home.gabrielson.ca/django-gabrielson-templates#egg=django_gabrielson_templates

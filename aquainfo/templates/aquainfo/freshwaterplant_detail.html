@@ -1,0 +1,157 @@
+{% extends 'aquainfo/base_detail.html' %}
+
+
+
+
+{% block aquainfo_content_main %}{# main content body #}
+
+    <table>
+        {% if object.scientific_name %}
+            <tr>
+                <th>
+                    Scientific name
+                </th>
+                <td>
+                    {{ object.scientific_name }}
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.origin %}
+            <tr>
+                <th>
+                    Origin
+                </th>
+                <td>
+                    {{ object.origin }} 
+                </td>
+                <td>
+                    <a href="{{ object.origin.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.size_display %}
+            <tr>
+                <th>
+                    Size
+                </th>
+                <td>
+                    {{ object.size_display }} cm
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.ph_display %}
+            <tr>
+                <th>
+                    pH
+                </th>
+                <td>
+                    {{ object.ph_display }}
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.temperature_display %}
+            <tr>
+                <th>
+                    Temperature
+                </th>
+                <td>
+                    {{ object.temperature_display }} &deg;C
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.hardness_display %}
+            <tr>
+                <th>
+                    Total hardness
+                </th>
+                <td>
+                    {{ object.hardness_display }} ppm
+                </td>
+            </tr>
+        {% endif %}
+
+        {% if object.growth_speed %}
+            <tr>
+                <th>
+                    Growth speed
+                </th>
+                <td>
+                    {{ object.growth_speed }} 
+                </td>
+                <td>
+                    <a href="{{ object.growth_speed.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.lighting %}
+            <tr>
+                <th>
+                    Lighting
+                </th>
+                <td>
+                    {{ object.lighting }} 
+                </td>
+                <td>
+                    <a href="{{ object.lighting.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.placement %}
+            <tr>
+                <th>
+                    Tank placement
+                </th>
+                <td>
+                    {{ object.placement }} 
+                </td>
+                <td>
+                    <a href="{{ object.placement.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+        {% if object.substrate %}
+            <tr>
+                <th>
+                    Substrate
+                </th>
+                <td>
+                    {{ object.substrate }} 
+                </td>
+                <td>
+                    <a href="{{ object.substrate.get_absolute_url }}">
+                        <small>(See details)</small>
+                    </a>
+                </td>
+            </tr>
+        {% endif %}
+        
+    </table>
+
+{% endblock %} 
+
+
+{% block aquainfo_navigation %}
+    <li>
+        <a href="{{ object.get_list_url }}">
+            freshwater plants
+        </a>
+    </li>
+{% endblock %}
+
+

@@ -1,0 +1,12 @@
+{% extends 'aquainfo/type_list.html' %}
+
+
+
+{% block head_subtitle %}Plant Propagation{% endblock %}
+{% block title %}Plant Propagation{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="propagation types" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

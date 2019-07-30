@@ -1,0 +1,12 @@
+{% extends 'aquainfo/type_list.html' %}
+
+
+
+{% block head_subtitle %}Plant Placement{% endblock %}
+{% block title %}Plant Placement{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="placements" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

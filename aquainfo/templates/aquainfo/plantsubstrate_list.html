@@ -1,0 +1,12 @@
+{% extends 'aquainfo/type_list.html' %}
+
+
+
+{% block head_subtitle %}Substrate{% endblock %}
+{% block title %}Substrate{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="substrates" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

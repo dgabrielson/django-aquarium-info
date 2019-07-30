@@ -1,0 +1,12 @@
+{% extends 'aquainfo/type_list.html' %}
+
+
+
+{% block head_subtitle %}List of Fish Breeding Types{% endblock %}
+{% block title %}List of Fish Breeding Types{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="breeding types" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

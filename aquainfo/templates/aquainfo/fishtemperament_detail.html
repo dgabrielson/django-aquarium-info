@@ -1,0 +1,52 @@
+{% extends 'aquainfo/type_detail.html' %}
+
+{% block aquainfo_navigation %}
+    <li>
+        <a href="{{ object.get_list_url }}">
+            temperaments
+        </a>
+    </li>
+{% endblock %}
+
+
+{% block aquainfo_content_extra %}
+
+    {% if object.fishtemperament_family_set.active %}
+        <section>
+            <h2>
+                Freshwater fish that have this temperament to their family
+                ({{ object.fishtemperament_family_set.active|length }})
+            </h2>
+            
+            <ul>
+                {% for item in object.fishtemperament_family_set.active %}
+                    <li>
+                        <a href="{{ item.get_absolute_url }}">
+                            {{ item }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
+    {% if object.fishtemperament_others_set.active %}
+        <section>
+            <h2>
+                Freshwater fish that have this temperament to other species
+                ({{ object.fishtemperament_others_set.active|length }})
+            </h2>
+            
+            <ul>
+                {% for item in object.fishtemperament_others_set.active %}
+                    <li>
+                        <a href="{{ item.get_absolute_url }}">
+                            {{ item }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
+{% endblock %}

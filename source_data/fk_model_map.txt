@@ -1,0 +1,11 @@
+Breeding type : FishBreedingType
+Origin : Origin
+Preferred swimming area : FishTankRegion
+Temperament to it's family : FishTemperament
+Temperament to other species : FishTemperament
+Growth speed : PlantGrowthSpeed
+Lighting : PlantLighting
+Place in the aquarium : PlantTankRegion
+Propagation : PlantPropagationType
+Substrate : PlantSubstrate
+

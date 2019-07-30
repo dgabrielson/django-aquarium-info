@@ -1,0 +1,12 @@
+{% extends 'aquainfo/type_list.html' %}
+
+
+
+{% block head_subtitle %}Plant Growth Speed{% endblock %}
+{% block title %}Plant Growth Speed{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="growth speeds" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

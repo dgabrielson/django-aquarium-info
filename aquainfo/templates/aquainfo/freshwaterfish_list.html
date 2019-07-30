@@ -1,0 +1,12 @@
+{% extends 'aquainfo/base_list.html' %}
+
+
+
+{% block head_subtitle %}List of Freshwater Fish{% endblock %}
+{% block title %}List of Freshwater Fish{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="fish" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

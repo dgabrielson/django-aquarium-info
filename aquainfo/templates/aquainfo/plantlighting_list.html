@@ -1,0 +1,12 @@
+{% extends 'aquainfo/type_list.html' %}
+
+
+
+{% block head_subtitle %}Lighting{% endblock %}
+{% block title %}Lighting{% endblock %}
+
+{% block aquainfo_content_main %}
+    {% with object_name="lighting" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
